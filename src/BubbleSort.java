@@ -1,7 +1,7 @@
 /**
  * BubbleSort.java
  * @author Euan Watkins
- * @version 2.0
+ * @version 2.1
  */
 
 public class BubbleSort extends Sort{
@@ -10,7 +10,7 @@ public class BubbleSort extends Sort{
      * @param array Array to sort.
      * @return Sorted array.
      */
-    public void sort(int[] array) {
+    public int[] sort(int[] array) {
         // For every item, compare every successive pair of items.
         for (int i = 0; i < array.length-1; i++) {
             for (int j = 0; j < array.length-i-1; j++) {
@@ -28,5 +28,6 @@ public class BubbleSort extends Sort{
         } else {
             System.out.println("\nError while sorting array");
         }
+        return array;
     }
 }

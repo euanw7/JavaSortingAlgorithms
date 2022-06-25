@@ -1,7 +1,7 @@
 /**
  * SelectionSort.java
  * @author Euan Watkins
- * @version 2.0
+ * @version 2.1
  */
 
 public class SelectionSort extends Sort {
@@ -12,7 +12,7 @@ public class SelectionSort extends Sort {
      * @return The sorted array.
      */
     @Override
-    public void sort(int[] array) {
+    public int[] sort(int[] array) {
         // Compare every item that comes after it.
         for (int i = 0; i < array.length-1; i++) {
             int minIndex = i;
@@ -33,6 +33,7 @@ public class SelectionSort extends Sort {
         } else {
             System.out.println("\nError while sorting array");
         }
+        return array;
     }
 
 }

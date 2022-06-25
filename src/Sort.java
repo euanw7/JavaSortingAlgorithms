@@ -1,7 +1,7 @@
 /**
  * Sort.java
  * @author Euan Watkins
- * @version 1.0
+ * @version 1.1
  */
 
 /**
@@ -10,7 +10,7 @@
 public abstract class Sort {
 
     // Here is where the various algorithms will be implemented.
-    public abstract void sort(int[] array);
+    public abstract int[] sort(int[] array);
 
     /**
      * This method is used at the end of an algorithm to check whether

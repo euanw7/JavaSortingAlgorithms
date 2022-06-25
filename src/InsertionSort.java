@@ -1,7 +1,7 @@
 /**
  * InsertionSort.java
  * @author Euan Watkins
- * @version 2.0
+ * @version 2.1
  */
 
 public class InsertionSort extends Sort {
@@ -11,7 +11,7 @@ public class InsertionSort extends Sort {
      * @param array The array to be sorted.
      * @return The new sorted array.
      */
-    public void sort(int[] array) {
+    public int[] sort(int[] array) {
         // Creates a new empty array of the same length as the original.
         int[] sortedArray = new int[array.length];
         // Compare every item in the original array with every other item.
@@ -33,5 +33,6 @@ public class InsertionSort extends Sort {
         } else {
             System.out.println("\nError while sorting array");
         }
+        return array;
     }
 }
