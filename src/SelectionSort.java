@@ -1,17 +1,18 @@
 /**
  * SelectionSort.java
  * @author Euan Watkins
- * @version 1.0
+ * @version 2.0
  */
 
-public class SelectionSort {
+public class SelectionSort extends Sort {
     /**
      * Selection sort goes through each item one by one finding the
      * next smallest.
      * @param array The array to be sorted.
      * @return The sorted array.
      */
-    public int[] selectionSort(int[] array) {
+    @Override
+    public void sort(int[] array) {
         // Compare every item that comes after it.
         for (int i = 0; i < array.length-1; i++) {
             int minIndex = i;
@@ -26,6 +27,12 @@ public class SelectionSort {
             array[minIndex] = array[i];
             array[i] = temp;
         }
-        return array;
+        // Check if the array has been sorted, notify the user of the outcome.
+        if (isSorted(array)) {
+            System.out.println("\nCompleted Selection Sort Successfully");
+        } else {
+            System.out.println("\nError while sorting array");
+        }
     }
+
 }

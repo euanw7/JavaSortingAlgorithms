@@ -1,16 +1,16 @@
 /**
  * BubbleSort.java
  * @author Euan Watkins
- * @version 1.0
+ * @version 2.0
  */
 
-public class BubbleSort {
+public class BubbleSort extends Sort{
     /**
      * Compares successive pairs of items and swaps if unsorted.
      * @param array Array to sort.
      * @return Sorted array.
      */
-    public int[] bubbleSort(int[] array) {
+    public void sort(int[] array) {
         // For every item, compare every successive pair of items.
         for (int i = 0; i < array.length-1; i++) {
             for (int j = 0; j < array.length-i-1; j++) {
@@ -22,6 +22,11 @@ public class BubbleSort {
                 }
             }
         }
-        return array;
+        // Check if the array has been sorted, notify the user of the outcome.
+        if (isSorted(array)) {
+            System.out.println("\nCompleted Bubble Sort Successfully");
+        } else {
+            System.out.println("\nError while sorting array");
+        }
     }
 }
