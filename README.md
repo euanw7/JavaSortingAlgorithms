@@ -1,5 +1,8 @@
 # JavaSortingAlgorithms
-This code implements three sorting algorithms using Java; selection sort, insertion sort, and bubble sort. Each method takes an integer array as a parameter and returns the sorted version of that array. Items are sorted in ascending order. 
+This code implements three sorting algorithms using Java; selection sort, insertion sort, and bubble sort. The Sort class is the parent class wich the other three inherit from. 
+- The sort() method is abstract, this is where the unique sorting algorithms are implemented in each class. It takes an integer array as a parameter. 
+- The isSorted() method is accessible by the three subclasses and will return true if the array passed in as a parameter is sorted and false if not.
+- Each sorting algorithm method will output to the screen whether the sort was successful or not and also return the array.
 
 ## Selection Sort
 This sorting algorithm compares every item in the array to every other item and notes down the smallest each time. It will then place the smallest item at the index of the item that it was being compared to (for example, if it was the first iteration it would be placed at index 0). It will then move on to the next item and repeat until every item has been iterated over, which means the array is sorted.
